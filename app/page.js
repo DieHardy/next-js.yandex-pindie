@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="main">
       <Banner />
-      <Promo />
-      <NewCardsList />
       <PopularCardsList />
+      <NewCardsList />
+      <Promo />
     </main>
   );
 }
