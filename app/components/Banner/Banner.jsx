@@ -18,7 +18,7 @@ export const Banner = () => {
         </a>
       </div>
       <img
-        src="./images/banner-illustration.jpg"
+        src="/images/banner-illustration.jpg"
         alt="Рука, утопленная в желтом фоне"
         className={Styles["banner__image"]}
       />
