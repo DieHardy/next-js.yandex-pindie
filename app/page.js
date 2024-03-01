@@ -2,14 +2,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { Banner } from "./components/Banner/Banner.jsx";
 import { Promo } from "./components/Promo/Promo.jsx";
-import { NewCardsList } from "./components/CardsList/NewCardsList.jsx";
-import { PopularCardsList } from "./components/CardsList/PopularCardsList.jsx";
+import { CardsList } from "./components/CardsList/CardsList.jsx";
+
 export default function Home() {
   return (
     <main className="main">
       <Banner />
-      <PopularCardsList />
-      <NewCardsList />
+      <CardsList id="popular" title="Популярное"></CardsList>
+      <CardsList id="new" title="Новое"></CardsList>
       <Promo />
     </main>
   );
