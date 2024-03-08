@@ -1,16 +1,32 @@
 import Styles from "./CardList.module.css";
-import { NewCardsFragment } from "./NewCardsFragment.jsx";
-import { PopularCardsFragment } from "./PopularCardsFragment";
-export const CardsList = function (props) {
+
+import { Card } from "/app/components/Card/Card.jsx";
+
+export const CardsList = (props) => {
+
+    
+  
   return (
-    <section className={Styles["list-section"]}>
-      <h2 className={Styles["list-section__title"]} id={props.id}>
+    <section className={Styles['list-section']}>
+      <h2 className={Styles['list-section__title']} id={props.id}>
         {props.title}
       </h2>
-      <ul className={Styles["cards-list"]}>
-        {(props.id === "new" && <NewCardsFragment />) ||
-          (props.id === "popular" && <PopularCardsFragment />)}
+      <ul className={Styles['cards-list']}>
+      {props.data.map((item)=>{
+          return(
+            <li className={Styles["cards-list__item"]} key={item.id}>
+              <a href={item.link} target="_blank" className={Styles["card-list__link"]}>
+                <Card {...item} />
+
+              </a>
+            </li>
+          );
+          })}
       </ul>
     </section>
   );
 };
+
+
+
+
