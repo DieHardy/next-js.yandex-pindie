@@ -1,13 +1,16 @@
+'use client';
 import Styles from "./CardList.module.css";
 
-import { Card } from "/app/components/Card/Card.jsx";
+import { Card } from "../Card/Card.jsx";
+import {useRef} from 'react';
+import {useState} from 'react';
 
 export const CardsList = (props) => {
 
-    
-  
   return (
+
     <section className={Styles['list-section']}>
+
       <h2 className={Styles['list-section__title']} id={props.id}>
         {props.title}
       </h2>
@@ -19,10 +22,13 @@ export const CardsList = (props) => {
                 <Card {...item} />
 
               </a>
+ 
+           
             </li>
           );
           })}
       </ul>
+      
     </section>
   );
 };
