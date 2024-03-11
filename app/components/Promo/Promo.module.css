@@ -9,7 +9,9 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
-
+.promo-code:hover {
+    cursor: pointer;
+}
 .promo__title {
     font-size: 42px;
     margin-bottom: 26px;

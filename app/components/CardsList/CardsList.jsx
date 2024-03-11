@@ -20,10 +20,7 @@ export const CardsList = (props) => {
             <li className={Styles["cards-list__item"]} key={item.id}>
               <a href={item.link} target="_blank" className={Styles["card-list__link"]}>
                 <Card {...item} />
-
               </a>
- 
-           
             </li>
           );
           })}

@@ -1,12 +1,10 @@
 'use client';
-import {useRef} from 'react';
-import {useState} from 'react';
+import {useState,} from 'react';
 import Styles from "./Header.module.css";
 import { Overlay } from '../Overlay/Overlay';
 import { AuthForm } from '../AuthForm/AuthForm';
 import { Popup } from '../Popup/Popup';
 export const Header = () => {
-
   let [popupIsOpened, setPopupIsOpened] = useState(false);
   const openPopup = () =>{
     setPopupIsOpened(true);
@@ -24,6 +22,7 @@ export const Header = () => {
           alt="Логотип Pindie"
         />
       </a>
+      
       <nav className={Styles.menu}>
         <ul className={Styles["menu__list"]}>
           <li className={Styles["menu__item"]}>
