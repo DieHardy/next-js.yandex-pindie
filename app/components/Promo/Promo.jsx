@@ -5,7 +5,7 @@ export const Promo = () => {
   let [codeIsVisible, SetVisibleCode] = useState(false);
   const buttonText = 'Получить код';
   const [time, setTime] = useState(new Date());
-  
+
     const handleButtonClick = () =>{
       {
         !codeIsVisible ? SetVisibleCode(true) : SetVisibleCode(false);
@@ -14,11 +14,12 @@ export const Promo = () => {
 
 
     useEffect(()=>{
-      const interval = setInterval(() => {
+      const timeout = setTimeout(() => {
         setTime(new Date());
       }, 5000);
       return () => {
         SetVisibleCode(false);
+        clearTimeout(timeout);
       };
     },[time]);
 
